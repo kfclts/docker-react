@@ -1,0 +1,4 @@
+docker run -p 8000:3000 -v /app/node_module -v $(pwd):/app ef0a1810523e
+
+production
+docker run -p 8000:80 0af905ee04ea
