@@ -2,3 +2,17 @@ docker run -p 8000:3000 -v /app/node_module -v $(pwd):/app ef0a1810523e
 
 production
 docker run -p 8000:80 0af905ee04ea
+
+
+
+GIT
+git config --global user.name "KFC"
+git config --global user.email "kfclts@gmail.com"
+git config --global user.name
+git config --global user.email
+
+git init
+git add .
+git commit -m "initial commit"
+git remote add origin https://github.com/kfclts/docker-react.git
+git push -u origin master
