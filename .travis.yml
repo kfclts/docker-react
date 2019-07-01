@@ -9,7 +9,7 @@ script:
   - docker run -e CI=true kfclts/docker-react npm run test -- --coverage
 
 deploy:
-  host: elasticbeanstalk
+  provider: elasticbeanstalk
   region: "us-east-2"
   app: "kfc-docker-react"
   env: "KfcDockerReact-env"
