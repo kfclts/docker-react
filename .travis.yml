@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run -e CI=true kfclts/docker-react npm run test -- --coverage
+
+deploy:
+  host: elasticbeanstalk
+  region: "us-east-2"
+  app: "kfc-docker-react"
+  env: "KfcDockerReact-env"
+  bucket_name: "elasticbeanstalk-us-east-2-858607988148"
+  bucket_path: "kfc-docker-react"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
